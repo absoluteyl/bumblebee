@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= Rails.application.credentials[Rails.env.to_sym][:db][:username].presence || 'root' %>
+  password: <%= Rails.application.credentials[Rails.env.to_sym][:db][:password].presence %>
+  host: <%= Rails.application.credentials[Rails.env.to_sym][:db][:host].presence || '127.0.0.1' %>
+  timeout: 5000
+
+
+development:
+  <<: *default
+  database: bumblebee_development
+
+test:
+  <<: *default
+  database: bumblebee_test
+
+production:
+  <<: *default
+  database: bumblebee_production
