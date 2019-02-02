@@ -1,0 +1,15 @@
+.row
+  .col-sm-4.col-sm-offset-4.text-center
+    %h2= 'Ready to reset!'
+    %p= 'Use 6 characters or more. Add numbers, lower and upper case letters for strength.'
+
+    = simple_form_for resource, as: resource_name, url: password_url(resource_name), html: { method: :put } do |f|
+      = devise_error_messages!
+      = f.hidden_field :reset_password_token
+
+      .form-group
+        = f.input :password, label: false, placeholder: 'Enter your new password', autocomplete: "new-password"
+      .actions
+        = f.submit "Change my password", class: 'btn bee-btn-lg-green'
+
+    = render "devise/shared/links"

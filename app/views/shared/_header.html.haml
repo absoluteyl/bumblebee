@@ -1,0 +1,9 @@
+.row
+  .col-xs-4.text-center
+    %h3= 'BumbleBee 🐝'
+  .col-xs-3.col-xs-offset-5
+    - if current_user
+      = link_to 'SIGN OUT', destroy_user_session_url, method: :delete, class: 'btn bee-btn-green'
+    - else
+      = link_to 'LOG IN', new_user_session_url, class: 'btn bee-btn-white'
+      = link_to 'SIGN UP', new_user_registration_url, class: 'btn bee-btn-green'

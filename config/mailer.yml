@@ -1,0 +1,31 @@
+default: &default
+  smtp_settings:
+    address: email-smtp.us-east-1.amazonaws.com
+    port: 587
+    user_name:
+    password:
+    authentication: login
+    enable_starttls_auto: true
+  default_options:
+    from: BumbleBee <noreply@example.com>
+
+development:
+  <<: *default
+  delivery_method: :letter_opener
+  default_url_options:
+    host: localhost:3000
+    protocol:
+
+test:
+  <<: *default
+  delivery_method: :test
+  default_url_options:
+    host: localhost
+    protocol:
+
+production:
+  <<: *default
+  delivery_method: :smtp
+  default_url_options:
+    host:
+    protocol:

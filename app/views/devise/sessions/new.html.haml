@@ -1,0 +1,12 @@
+.row
+  .col-sm-4.col-sm-offset-4.text-center
+    %h2= 'Welcome back! Make yourself at home.'
+
+    = simple_form_for resource, as: resource_name, url: session_url(resource_name), method: :post do |f|
+      .form-group
+        = f.input :email, label: false, placeholder: 'Email', autofocus: true, autocomplete: "email"
+        = f.input :password, label: false, placeholder: 'Password', autocomplete: "current-password"
+      .actions
+        = f.submit "LOG IN", class: 'btn bee-btn-lg-green'
+
+    = render "devise/shared/links"

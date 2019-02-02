@@ -1,0 +1,46 @@
+.btn {
+  border-color: $bee-color;
+  border-radius: 5px;
+  padding: 14px 23px;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $dark-bee-color;
+  }
+}
+
+.bee-btn-white {
+  color: $bee-color;
+  background-color: #ffffff;
+  margin: 7px;
+
+  &:hover {
+    color: $dark-bee-color;
+  }
+}
+
+.bee-btn-green {
+  color: #ffffff;
+  background-color: $bee-color;
+  margin: 7px;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $dark-bee-color;
+  }
+}
+
+.bee-btn-lg-green {
+  width: 100%;
+  color: #ffffff;
+  background-color: $bee-color;
+  margin-bottom: 10px;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $dark-bee-color;
+  }
+}

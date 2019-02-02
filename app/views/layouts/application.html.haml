@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title BumbleBee 🐝
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+
+  %body
+    .container-fluid
+      .row
+        .header.col-xs-12
+          = render 'shared/header'
+      .row
+        .content.col-xs-12{ class: yield(:content_class) }
+          .row
+            %p.notice= notice
+            %p.alert= alert
+          .row
+            = yield

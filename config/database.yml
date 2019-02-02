@@ -8,7 +8,6 @@ default: &default
   host: <%= Rails.application.credentials[Rails.env.to_sym][:db][:host].presence || '127.0.0.1' %>
   timeout: 5000
 
-
 development:
   <<: *default
   database: bumblebee_development

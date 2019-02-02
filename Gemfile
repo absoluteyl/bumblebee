@@ -14,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
+gem 'turbolinks', '~> 5.2.0'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
@@ -62,3 +63,14 @@ group :development do
   gem 'binding_of_caller', '0.8.0'
   gem 'meta_request', '0.6.0'
 end
+
+gem 'aws-sdk-s3', '1.9.0'
+gem 'bootstrap-sass', '~> 3.4.0'
+gem 'cancancan', '2.2.0'
+gem 'devise', '4.5.0'
+gem 'devise-i18n', '1.6.2'
+gem 'hamlit', '2.8.8'
+gem 'jquery-rails', '4.3.3'
+gem 'letter_opener', '1.6.0', group: :development
+gem 'paperclip', '6.0.0'
+gem 'simple_form', '4.1.0'

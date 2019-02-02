@@ -1,0 +1,13 @@
+.row
+  .col-sm-4.col-sm-offset-4.text-center
+    %h2= "Forgot your password?"
+    %p= "Enter the email address you've registered with us, and we’ll send help shortly."
+
+    = simple_form_for resource, as: resource_name, url: password_url(resource_name), html: { method: :post }  do |f|
+      = devise_error_messages!
+      .form-group
+        = f.input :email, label: false, placeholder: 'Enter email address', autofocus: true, autocomplete: "email"
+      .actions
+        = f.submit "RESET PASSWORD", class: 'btn bee-btn-lg-green'
+
+    = render "devise/shared/links"

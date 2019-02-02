@@ -1,0 +1,29 @@
+$bee-color: #07c748;
+$dark-bee-color: green;
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+a {
+  color: $bee-color;
+  font-size: 16px;
+
+
+  &:hover {
+    color: $dark-bee-color;
+    text-decoration: none;
+  }
+}
+
+.header {
+  height: 60px;
+}
+
+.content {
+  height: 100vh;
+
+  &.after-signin {
+    background-color: #f8f7f4;
+  }
+}
