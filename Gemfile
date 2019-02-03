@@ -72,5 +72,4 @@ gem 'devise-i18n', '1.6.2'
 gem 'hamlit', '2.8.8'
 gem 'jquery-rails', '4.3.3'
 gem 'letter_opener', '1.6.0', group: :development
-gem 'paperclip', '6.0.0'
 gem 'simple_form', '4.1.0'

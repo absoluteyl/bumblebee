@@ -1,12 +1,13 @@
+- content_for :content_class, 'sign-up'
 .row
   .col-sm-4.col-sm-offset-4.text-center
     %h2= "Hi, let's get to know each other."
 
     = simple_form_for resource, as: resource_name, url: registration_url(resource_name) do |f|
-      = devise_error_messages!
-      .form-group
-        = f.input :email, label: false, placeholder: 'Email', autofocus: true, autocomplete: "email"
-        = f.input :password, label: false, placeholder: 'Password', autocomplete: "new-password"
+      = f.input :first_name, label: false, placeholder: 'First name', autofocus: true
+      = f.input :last_name, label: false, placeholder: 'Last name'
+      = f.input :email, label: false, placeholder: 'Email', autocomplete: "email"
+      = f.input :password, label: false, placeholder: 'Password', autocomplete: "new-password"
       .actions
         = f.submit "SIGN UP", class: 'btn bee-btn-lg-green'
 

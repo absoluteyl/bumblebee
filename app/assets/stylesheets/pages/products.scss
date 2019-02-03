@@ -1,0 +1,30 @@
+.products {
+
+  .product-groups {
+
+    .product-group {
+      border: 1px solid burlywood;
+      border-radius: 15px;
+      margin: 10px;
+      padding: 10px;
+
+      .image {
+        display: inline-block;
+        width: 50%;
+      }
+
+      .desc {
+        display: inline-block;
+        width: 45%;
+
+        .premium {
+          color: red;
+        }
+      }
+
+      &:hover {
+        background-color: #fff9d8;
+      }
+    }
+  }
+}

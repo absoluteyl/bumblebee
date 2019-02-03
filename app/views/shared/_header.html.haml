@@ -1,9 +1,14 @@
 .row
   .col-xs-4.text-center
-    %h3= 'BumbleBee 🐝'
-  .col-xs-3.col-xs-offset-5
+    .bumble-bee-logo
+      = link_to 'BumbleBee 🐝', root_url
+  .col-xs-8.actions
     - if current_user
       = link_to 'SIGN OUT', destroy_user_session_url, method: :delete, class: 'btn bee-btn-green'
+      - if !current_user.premium? && can?(:manage, current_user)
+        = link_to 'UPGRADE PREMIUM', upgrade_user_url, class: 'btn bee-btn-green'
     - else
       = link_to 'LOG IN', new_user_session_url, class: 'btn bee-btn-white'
       = link_to 'SIGN UP', new_user_registration_url, class: 'btn bee-btn-green'
+    - if can? :manage, Product
+      = link_to 'CREATE PRODUCT', new_product_url, class: 'btn bee-btn-white'

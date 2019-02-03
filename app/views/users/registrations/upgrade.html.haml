@@ -1,0 +1,10 @@
+- content_for :content_class, 'after-signin upgrade'
+
+.row
+  .col-sm-4.col-sm-offset-4.text-center
+    %h2= "Upgrade your membership now!"
+    %p= 'With BumbleBee Premium, you can purchase all our products with 80% discount!'
+
+    = simple_form_for current_user, url: upgrading_user_url, method: :post do |f|
+      = f.hidden_field :premium, value: 1
+      = f.submit 'UPGRADE NOW for $30/month', class: 'btn bee-btn-lg-green'

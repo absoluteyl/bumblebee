@@ -1,0 +1,19 @@
+- content_for :content_class, 'after-signin product'
+
+.row
+  .col-sm-4.col-sm-offset-4.text-center.product-group
+    .product-info
+      %h3= @product.name
+      .image
+        = image_tag url_for(@product.image), width: '300px'
+      - if current_user.premium?
+        %p= @product.localized_original_price
+        %p.premium= @product.localized_premium_price
+      - else
+        %p= @product.localized_original_price
+    .action-buttons
+      - unless current_user.premium?
+        %span= "Feeling to expansive?"
+        = link_to 'Upgrade to Premium', upgrade_user_url
+      - if can? :manage, @product
+        = link_to 'EDIT', edit_product_url(@product), class: 'btn bee-btn-lg-white'

@@ -1,0 +1,7 @@
+= simple_form_for @product, html: { multipart: true } do |f|
+  = f.input :name, label: false, placeholder: 'Product name', required: true
+  = f.input :price, label: false, placeholder: 'Price', required: true
+  = f.input :image, as: 'file', accept: "image/*", label: 'Product Image', required: true
+  .actions
+    = f.button :submit, 'CREATE', class: 'btn bee-btn-lg-green'
+    = link_to 'CANCEL', back_url, class: 'btn bee-btn-lg-white'

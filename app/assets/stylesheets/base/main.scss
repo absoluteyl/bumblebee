@@ -18,6 +18,21 @@ a {
 
 .header {
   height: 60px;
+
+  .bumble-bee-logo {
+    padding: 10px;
+
+    a {
+      color: #000000;
+      font-size: 28px;
+    }
+  }
+
+  .actions {
+    a {
+      float: right;
+    }
+  }
 }
 
 .content {

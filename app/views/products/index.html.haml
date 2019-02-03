@@ -1,0 +1,19 @@
+- content_for :content_class, 'after-signin products'
+
+.row
+  .col-sm-12.text-center
+    %h1= "Hey #{current_user.first_name}, how can we help you today?"
+.row
+  .col-sm-6.col-sm-offset-3
+    .product-groups
+      - @products.each do |product|
+        .product-group
+          .image{ style: "display:inline-block;"}
+            = image_tag url_for(product.image), height: '200px'
+          .desc{ style: "display:inline-block;"}
+            %h5= link_to product.name, product_url(product)
+            - if current_user.premium?
+              %p= product.localized_original_price
+              %p.premium= product.localized_premium_price
+            - else
+              %p= product.localized_original_price

@@ -1,20 +1,10 @@
+amazon:
+  service: S3
+  access_key_id: <%= Rails.application.credentials[Rails.env.to_sym][:aws][:access_key_id].presence %>
+  secret_access_key: <%= Rails.application.credentials[Rails.env.to_sym][:aws][:secret_access_key].presence %>
+  region: ap-northeast-1
+  bucket: bumblebee-ap-northeast-1-860030201430
+
 test:
   service: Disk
   root: <%= Rails.root.join("tmp/storage") %>
-
-local:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
-
-# Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
-# amazon:
-#   service: S3
-#   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
-#   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
-#   region: us-east-1
-#   bucket: your_own_bucket
-
-# mirror:
-#   service: Mirror
-#   primary: local
-#   mirrors: [ amazon, google, microsoft ]
