@@ -1,0 +1,38 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.gitkeep
+!/tmp/.gitkeep
+!/tmp/pids/.gitkeep
+
+# Ignore uploaded files in development
+/storage/*
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# Ignore rvm files
+.versions.conf
+
+# Ignore test files
+/test-plans
+/coverage
+
+# Ignore doc files
+.yardoc
+/doc
+
+# Ignore env files
+.env*
+!.env.sample
+!.env*.enc
+!.env.test.ci
+
+# Ignore docker files
+docker-compose.yml
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key

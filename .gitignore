@@ -29,3 +29,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 .versions.conf
+
+# Ignore env files
+.env*
+!.env.sample
+!.env*.enc
