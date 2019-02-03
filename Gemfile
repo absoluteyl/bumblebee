@@ -64,6 +64,13 @@ group :development do
   gem 'meta_request', '0.6.0'
 end
 
+# ----------- #
+# - Monitor - #
+# ----------- #
+
+# health check apis for latency and db: /health/latency, /health/db
+gem 'rails-health-check', '1.0.0'
+
 gem 'aws-sdk-s3', '1.9.0'
 gem 'bootstrap-sass', '~> 3.4.0'
 gem 'cancancan', '2.2.0'
