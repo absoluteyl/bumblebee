@@ -3,7 +3,6 @@ Feature: 04 Product Management
   Background:
     Given "John Doe" has already signed up with password: "password" as "admin"
 
-  @javascript
   Scenario: [04_01]
     1. Admin  can find create product page
     2. Display errors when missing required info
