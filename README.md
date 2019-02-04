@@ -4,6 +4,10 @@
 
 - [BumbleBee](https://bumblebee.absoluteyl.me)
 
+## Deployment
+
+  BumbleBee app the is deployed to AWS by Terraform, terraform script is placed on [bumblebee-terraform](https://github.com/absoluteyl/bumblebee-terraform)
+
 ## ENVs
 
   all the environment variables are stored in .enc files and encrypted by SEKRETS_KEY

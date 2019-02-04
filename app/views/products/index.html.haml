@@ -8,9 +8,9 @@
     .product-groups
       - @products.each do |product|
         .product-group
-          .image{ style: "display:inline-block;"}
-            = image_tag url_for(product.image), height: '200px'
-          .desc{ style: "display:inline-block;"}
+          .image
+            = image_tag url_for(product.image)
+          .desc
             %h5= link_to product.name, product_url(product)
             - if current_user.premium?
               %p= product.localized_original_price

@@ -6,6 +6,7 @@ class Product < ApplicationRecord
 
   validates :name,  presence: true, length: { maximum: 200 }
   validates :price, presence: true, numericality: { greater_than: 0 }
+  validates :image, attached: true
 
   def localized_original_price
     "Price: #{self.price}"

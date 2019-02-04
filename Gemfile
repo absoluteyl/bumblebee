@@ -41,6 +41,9 @@ gem 'mysql2', '>= 0.4.4', '< 0.6.0', '0.5.2'
 group :test do
   gem 'cucumber', '3.1.2'
   gem 'cucumber-rails', '1.6.0', require: false
+  gem 'database_cleaner', '1.6.2'
+  gem 'email_spec', '2.2.0'
+  gem 'rspec-rails', '3.7.2'
   gem 'selenium-webdriver', '3.13.1'
 end
 
